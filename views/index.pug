@@ -1,0 +1,98 @@
+link#dark-mode-custom-link(type='text/css' rel='stylesheet')
+link#dark-mode-general-link(type='text/css' rel='stylesheet')
+style#dark-mode-custom-style(lang='en' type='text/css').
+style#dark-mode-native-style(lang='en' type='text/css').
+head
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible' content='chrome=1')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  title ArkOwl Query
+  style
+             include ./style.css
+  script(src='jquery.min.js')
+  //if lt IE 9
+    script(src='//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+    script(src='//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+  style(type='text/css').
+//if lt IE 9 
+// [if (gte IE 9)|!(IE)] <!
+// <![endif]
+header#top
+  nav.hidden-logo-navbar(role='navigation')
+    .container
+      .nav-header
+        h1.nav-brand
+          a(href='#top') ArkOwl - ArkOwl Query
+        button.nav-toggle(type='button') Menu
+      .nav-form
+        form.query-form(method='POST' data-reactid='.1')
+          input(type='text' name='email' autocomplete='off' autocorrect='off' autocapitalize='none' spellcheck='false' value="" placeholder='name@example.com' data-reactid='.1.0')
+          input(type='text' name='phone' autocomplete='off' autocorrect='off' autocapitalize='none' spellcheck='false' value="" placeholder='+1 (123) 456-7890' data-reactid='.1.1')
+          input.search-button(type='submit' value='Search' data-reactid='.1.2')
+      ul.nav-menu.nav
+        li
+          a(href='/') Email Query
+        li
+          a(href='/') Batch Query
+  
+#app-container
+  div(data-reactid='.0')
+    noscript(data-reactid='.0.0')
+    section#search-form(data-reactid='.0.1')
+      .container(data-reactid='.0.1.0')
+        img.arkowl-hero(src="/arkowl-logo-new-white-xl.png" data-reactid='.0.1.0.0')
+        h3(data-reactid='.0.1.0.1') Email Address &amp; Phone Number Verification
+        form.query-form(method='POST' data-reactid='.0.1.0.2')
+          input(type='text' name='email' autocomplete='off' autocorrect='off' autocapitalize='none' spellcheck='false' value='' placeholder='name@example.com' data-reactid='.0.1.0.2.0')
+          input(type='text' name='phone' autocomplete='off' autocorrect='off' autocapitalize='none' spellcheck='false' value='' placeholder='+1 (123) 456-7890' data-reactid='.0.1.0.2.1')
+          input.search-button(type='submit' value='Search' data-reactid='.0.1.0.2.2')
+    noscript(data-reactid='.0.3')
+footer
+  .container
+    .footer-row
+      .footer-block
+        h4 Navigation
+        ul
+          li
+            a(href='#top') Top
+          li
+            a(href='/') Email Query
+          li
+            a(href='/') Batch Query
+          li
+            a(href='/') Dashboard
+      .footer-block
+        h4 Social
+        ul
+          li
+            a(href='https://twitter.com/arkowl')
+              i.fa.fa-twitter
+              |  twitter
+          li
+            a(href='https://www.linkedin.com/company/arkowl')
+              i.fa.fa-linkedin-square
+              |  linkedin
+      .footer-block
+        h4 Legal
+        ul
+          li
+            a(href='/terms') Terms of use
+          li
+            a(href='/docs/arkowl_privacy_policy.pdf') Privacy Policy
+      .footer-block
+        h4 Contact Us
+        ul
+          li
+            a(href='mailto:help@arkowl.com') help@arkowl.com
+          li
+            a(href='mailto:accounts@arkowl.com') accounts@arkowl.com
+    br
+    p
+      | &copy; 2022 ArkOwl LLC &mdash; 
+      span made with &hearts; in Minneapolis, MN USA
+//
+  - <script src="base.js"></script>
+  <script src="query.js"></script>
+.ReactModalPortal
+  div(data-reactid='.2')
+
