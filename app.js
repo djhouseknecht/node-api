@@ -68,6 +68,7 @@ app.post('/', async function(req, res) {
     phone = req.body.phone;
     console.log(email);
     console.log(phone);
+    //I cant make redirect or render wait till im done with the api call
     await search();
     try {
         //res.send(`Email: ${email} Phone: ${phone}`);
@@ -93,7 +94,7 @@ app.post('/result', async function(req, res) {
     console.log(email);
     console.log(phone);
     await search();
-    //i cant make redirect or render wait till im done with the api call
+    //I cant make redirect or render wait till im done with the api call
     try {
         //res.send(`Email: ${email} Phone: ${phone}`);
         setTimeout(() => {
